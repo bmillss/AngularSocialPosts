@@ -1,0 +1,11 @@
+<table class = "">
+    <ng-container *ngFor= "let mypost of mypostlist"> 
+        <tr>
+        <app-one-post [onepost] = "mypost"></app-one-post>
+        <button (click) ="DeletePost(mypost)">Delete</button>
+        </tr>
+    </ng-container>
+</table>
+<input type="text" [(ngModel)] ="newpostTitle"/>
+<input type="text" [(ngModel)] ="newpostbody"/>
+<button (click) ="AddPost()">Add Post</button>
